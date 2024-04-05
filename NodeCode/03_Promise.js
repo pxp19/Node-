@@ -4,7 +4,7 @@
 // Promise构造函数的回调函数，它会在创建Promise时调用，调用时会有两个参数传递过去
 const promise = new Promise((resolve, reject) => {
   // Promise 中存储数据
-  // resolve 和 reject 两个函数，通过这俩哪个函数可以向Promise中存储数据
+  // resolve 和 reject 两个函数，通过这两个函数可以向Promise中存储数据
   // resolve在执行正常时存储数据
   // reject在执行错误时存储数据
   // 通过  函数  来向 Promise 中添加数据， 好处就是可以用来添加异步调用的数据
@@ -28,7 +28,7 @@ setTimeout(() => {
 从 Promise 中读取数据
 
     - 可以通过Promise的实例方法then来读取Promise中存储的数据
-    - then需要两个回调函数作为参数， 回调函数用来获取Promise中的数据
+    - then 需要两个回调函数作为参数， 回调函数用来获取Promise中的数据
         通过 resolve 存储的数据，会调用第一个函数返回，
             可以在第一个函数中编写处理 数据 的代码
         通过 reject 存储的数据或者出现异常时， 会调用第二个函数返回
