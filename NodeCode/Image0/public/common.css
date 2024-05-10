@@ -1,0 +1,77 @@
+.page {
+  height: 100%;
+  width: 100%;
+  /* background: linear-gradient(
+    174deg,
+    rgba(178, 185, 190, 0.7),
+    rgba(47, 64, 82, 0.9)
+  ); */
+  background: linear-gradient(
+    123deg,
+    rgba(238, 201, 163, 0.8),
+    rgb(239, 98, 159, 0.6)
+  );
+  /* background: linear-gradient(174deg, rgb(178, 185, 190), rgb(47, 64, 82), 0.5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px; /* 添加 padding 以增加响应式设计的空间 */
+}
+
+.header {
+  padding: 30px;
+  font-size: 2rem; /* 使用 rem 单位来设置字体大小 */
+  font-weight: bold;
+  line-height: 2.5rem; /* 使用 rem 单位来设置行高 */
+  height: 10%; /* 使用百分比单位使 header 高度相对于页面高度 */
+  margin-bottom: 20px; /* 添加间距以增加响应式设计的空间 */
+}
+.main {
+  /* background-color: #fff; */
+  width: 100%;
+  height: 90%;
+  padding: 30px;
+  height: 80%; /* 使用百分比单位使 main 区域高度相对于页面高度 */
+  display: flex;
+  /* flex-direction: row; */
+  flex-direction: column;
+  justify-content: space-around; /* 在水平方向上均匀分布元素 */
+  align-items: center;
+}
+
+.box-left,
+.box-middle,
+.box-right {
+  /* padding: 40px; */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 20px;
+
+  /* padding-left: 10px; */
+  width: 100%;
+  background: skyblue;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+text {
+  margin-bottom: 100px;
+  font-weight: bold;
+}
+
+/* 添加媒体查询以应用不同的样式 */
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .box-left,
+  .box-middle,
+  .box-right {
+    width: 80%;
+    /* height: 80%; */
+  }
+}

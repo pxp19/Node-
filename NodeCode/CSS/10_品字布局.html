@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>"品"字布局对比</title>
+    <style>
+      .container {
+        margin-bottom: 50px;
+      }
+
+      .container div {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+        line-height: 100px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 10px; /* 为了视觉上分开上下部分 */
+      }
+
+      /* 浮动布局样式 */
+      .float-layout .div1 {
+        background: red;
+        margin: 0 auto;
+      }
+
+      .float-layout .div2 {
+        background: green;
+        float: left;
+        margin-left: 50%;
+      }
+
+      .float-layout .div3 {
+        background: blue;
+        float: left;
+        margin-left: -200px;
+      }
+
+      /* inline-block布局样式 */
+      .inline-block-layout .div1 {
+        background: red;
+        margin: 0 auto;
+      }
+
+      .inline-block-layout .div2,
+      .inline-block-layout .div3 {
+        display: inline-block;
+      }
+
+      .inline-block-layout .div2 {
+        background: green;
+        margin-left: 50%;
+      }
+
+      .inline-block-layout .div3 {
+        background: blue;
+        margin-left: -200px;
+      }
+
+      /* 清除浮动 */
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container float-layout">
+      <div class="description">浮动实现的“品”字布局：</div>
+      <div class="div1">1</div>
+      <div class="div2">2</div>
+      <div class="div3">3</div>
+      <div class="clear"></div>
+      <!-- 用于清除浮动 -->
+    </section>
+
+    <section class="container inline-block-layout">
+      <div class="description">inline-block实现的“品”字布局：</div>
+      <div class="div1">1</div>
+      <div class="div2">2</div>
+      <div class="div3">3</div>
+    </section>
+  </body>
+</html>

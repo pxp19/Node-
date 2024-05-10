@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      caption {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      table {
+        /* border: ; */
+        border: 2px;
+      }
+      thead {
+        font-weight: bold;
+      }
+      td {
+        align-items: center;
+      }
+    </style>
+    <title>学生列表</title>
+  </head>
+  <body>
+    <% for(const stu of students) { %> <%= stu.name %> - <%= stu.age %> -<%=
+    stu.address %>
+    <br />
+    <% } %>
+
+    <!-- 表格部分 -->
+
+    <table>
+      <caption>
+        学生信息表
+      </caption>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>地址</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(const stu of students) { %>
+        <tr>
+          <!-- <td>孙悟空</td>
+          <td>18</td>
+          <td>花果山</td> -->
+          <td><%= stu.name %></td>
+          <td><%= stu.age %></td>
+          <td><%= stu.address %></td>
+          <% } %>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 表单提交 -->
+
+    <form action="/add-student" method="post">
+      <div>姓名<input type="text" name="name" /></div>
+      <div>年龄<input type="text" name="age" /></div>
+      <div>地址<input type="text" name="address" /></div>
+      <div><input type="submit" />添加</div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three Column Layout Comparison</title>
+    <style>
+      /* Flexbox */
+      .flex-container {
+        display: flex;
+      }
+      .flex-container .flex-item {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 5px;
+      }
+
+      /* CSS Grid */
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+      .grid-container .grid-item {
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      /* Float */
+      .float-container {
+        overflow: hidden; /* 清除浮动 */
+      }
+      .float-container .float-item {
+        float: left;
+        width: 30%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+      }
+
+      /* CSS Table */
+      .table-container {
+        display: table;
+        width: 100%;
+      }
+      .table-container .table-row {
+        display: table-row;
+      }
+      .table-container .table-cell {
+        display: table-cell;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      /* General styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      h2 {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Flexbox</h2>
+    <div class="flex-container">
+      <div class="flex-item">Left Column</div>
+      <div class="flex-item">Middle Column</div>
+      <div class="flex-item">Right Column</div>
+    </div>
+
+    <h2>CSS Grid</h2>
+    <div class="grid-container">
+      <div class="grid-item">Left Column</div>
+      <div class="grid-item">Middle Column</div>
+      <div class="grid-item">Right Column</div>
+    </div>
+
+    <h2>Float</h2>
+    <div class="float-container">
+      <div class="float-item">Left Column</div>
+      <div class="float-item">Middle Column</div>
+      <div class="float-item">Right Column</div>
+    </div>
+
+    <h2>CSS Table</h2>
+    <div class="table-container">
+      <div class="table-row">
+        <div class="table-cell">Left Column</div>
+        <div class="table-cell">Middle Column</div>
+        <div class="table-cell">Right Column</div>
+      </div>
+    </div>
+   
+  </body>
+</html>

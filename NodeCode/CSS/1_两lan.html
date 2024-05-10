@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <!-- 这是
+      <div>这是</div> -->
+
+      <div class="left">left-float</div>
+      <div class="right">right-float</div>
+      <div>这是在盒子里面 在的位置是正确的</div>
+    </div>
+    <div>或者</div>
+
+    <div class="container">
+      <div class="float-left">左侧浮动元素</div>
+      <div class="float-right">右侧浮动元素</div>
+      <div class="clearfix"></div>
+      <div class="content">内容区域</div>
+    </div>
+    hello
+
+    <style>
+      .main {
+        /* height: 200px; */
+        background-color: #faa0a0;
+        overflow: hidden;
+        /* clear: both; */
+      }
+      .container {
+        background-color: skyblue;
+      }
+
+      .left,
+      .float-left {
+        float: left;
+        width: 200px;
+        background-color: gray;
+        height: 400px;
+        /* clear: both; */
+      }
+      .right,
+      .float-right {
+        margin-left: 210px;
+        background-color: lightgray;
+        height: 200px;
+        /* clear: both; */
+      }
+      /* 为了清除浮动，更推荐使用伪元素方法 */
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </body>
+</html>

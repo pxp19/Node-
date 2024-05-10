@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="outer">
+      <!-- 12 -->
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+    <!-- float -->
+    <h2>Float</h2>
+    <div class="float-container">
+      <div class="float-item">Left Column</div>
+
+      <div class="float-item">Right Column</div>
+    </div>
+
+    <div class="outer1">
+      <div class="left1">left</div>
+      <div class="right1">right</div>
+    </div>
+
+    <!-- flex -->
+    <div class="outer2">
+      <div class="left2">left</div>
+      <div class="right2">right</div>
+    </div>
+
+    <!-- 绝对定位 -->
+    <div class="outer3">
+      <dic class="left3"></dic>
+      <div class="right3"></div>
+    </div>
+    <style>
+      .outer {
+        height: 100px;
+        /* background: blue; */
+      }
+
+      .left {
+        float: left;
+        width: 200px;
+        background: rgb(113, 179, 206);
+      }
+      .right {
+        margin-left: 200px;
+        width: auto;
+        background: rgb(224, 175, 224);
+      }
+
+      .left1 {
+        width: 100px;
+        height: 200px;
+        background: rgb(223, 136, 136);
+        float: left;
+      }
+      .right1 {
+        height: 300px;
+        background: rgb(119, 119, 194);
+        overflow: hidden;
+      }
+
+      /* flex布局 */
+      .outer2 {
+        display: flex;
+        height: 100px;
+      }
+      .left2 {
+        width: 200px;
+        background: tomato;
+      }
+      .right2 {
+        flex: 1;
+        background: gold;
+      }
+      /* 绝对定位 */
+      .outer3 {
+        position: relative;
+        height: 100px;
+      }
+      .left3 {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        background: lightblue;
+      }
+      .right3 {
+        height: 100px;
+
+        margin-left: 200px;
+        background: rgb(219, 208, 143);
+      }
+      /*  */
+
+      .float-container {
+        overflow: hidden; /* 清除浮动 */
+      }
+      .float-container .float-item {
+        float: left;
+        width: 30%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+      }
+    </style>
+  </body>
+</html>

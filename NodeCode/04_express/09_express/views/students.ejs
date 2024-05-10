@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>这是ejs模板</title>
+  </head>
+  <body>
+    <h1>这是ejs模板</h1>
+
+    <h2><%= name %></h2>
+    <h2><%= age %></h2>
+
+    <form action="/set_name">
+      <input type="text" name="name" placeholder="请输入你的名字" />
+      <button>提交</button>
+    </form>
+
+    <% if (name === "孙悟空") { %>
+    <h2>大师兄来了</h2>
+    <% } else { %>
+    <h2>二师兄来了</h2>
+    <% } %>
+  </body>
+</html>
