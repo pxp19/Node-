@@ -1,0 +1,1 @@
+(()=>{var o={338:o=>{fun=function(o,n){return o*n},o.exports={fun,hello:function(){console.log("你好dada"),console.log("你好cc"),console.log("21")}}}},n={};function r(e){var t=n[e];if(void 0!==t)return t.exports;var l=n[e]={exports:{}};return o[e](l,l.exports,r),l.exports}(()=>{const{fun:o,hello:n}=r(338);o(1,2),n()})()})();
