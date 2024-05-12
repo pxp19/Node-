@@ -25,7 +25,7 @@ npm init -y  #这样在新文件夹中初始化可以省略命令行中出现询
 npm install webpack webpack-cli -D
 或者是
 npm install webpack webpack-cli --save-dev
-
+#webpack-cli的作用是能够让webpack命令在命令行界面执行
 # 错误npm webpack-v 
 npx webpack-v  #会在nodemodules中寻找webpack
 #可以在这里面找到历史版本的webpack版本
@@ -53,6 +53,31 @@ npm info webpack
   }
 }
 
+```
+
+### 配置webpack文件
+
+```
+#webpack.config.js
+const path = require('path')
+module.exports = {
+entry:'./src/index.js',//配置入口文件
+//配置输出的文件名以及文件存储的文件夹路径
+output:{
+	filename:'main.js',
+	path:path.resolve(__dirname,'dist')
+	}
+}
+
+```
+
+我的理解会是这个入口文件就像是nodejs模块化中的部分，这个作为 把这个index.js引入某个文件中然后可以把这个module文件引入到所需要的部分之后就可以避免一个一个引入的麻烦(index.js部分会被默认找到)
+
+```
+-module
+	-index.js
+	-module01.js
+	-module02.js
 ```
 
 
